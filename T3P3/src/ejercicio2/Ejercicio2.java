@@ -84,25 +84,37 @@ public class Ejercicio2 extends JFrame {
 		JLabel lblNewLabel_1 = new JLabel("Frases que empiezan por VOCAL");
 		
 		JLabel lblNewLabel_1_1 = new JLabel("Frases que empiezan por CONSONANTE");
+		
+		JButton btnSalir = new JButton("Salir");
+		btnSalir.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				salir();
+			}
+		});
 		GroupLayout gl_contentPane = new GroupLayout(contentPane);
 		gl_contentPane.setHorizontalGroup(
 			gl_contentPane.createParallelGroup(Alignment.LEADING)
 				.addGroup(gl_contentPane.createSequentialGroup()
-					.addGap(105)
 					.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
-						.addComponent(lblNewLabel_1_1, GroupLayout.PREFERRED_SIZE, 185, GroupLayout.PREFERRED_SIZE)
-						.addComponent(lblNewLabel_1, GroupLayout.PREFERRED_SIZE, 185, GroupLayout.PREFERRED_SIZE)
 						.addGroup(gl_contentPane.createSequentialGroup()
-							.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING, false)
-								.addComponent(lblNewLabel, GroupLayout.PREFERRED_SIZE, 132, GroupLayout.PREFERRED_SIZE)
-								.addComponent(txtAñadir, GroupLayout.DEFAULT_SIZE, 224, Short.MAX_VALUE)
-								.addComponent(cmbVocal, 0, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-								.addComponent(cmbConsonante, 0, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-							.addGap(154)
+							.addGap(105)
 							.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
-								.addComponent(btnIngresar)
-								.addComponent(btnVocal)
-								.addComponent(btnConsonante))))
+								.addComponent(lblNewLabel_1_1, GroupLayout.PREFERRED_SIZE, 185, GroupLayout.PREFERRED_SIZE)
+								.addComponent(lblNewLabel_1, GroupLayout.PREFERRED_SIZE, 185, GroupLayout.PREFERRED_SIZE)
+								.addGroup(gl_contentPane.createSequentialGroup()
+									.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING, false)
+										.addComponent(lblNewLabel, GroupLayout.PREFERRED_SIZE, 132, GroupLayout.PREFERRED_SIZE)
+										.addComponent(txtAñadir, GroupLayout.DEFAULT_SIZE, 224, Short.MAX_VALUE)
+										.addComponent(cmbVocal, 0, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+										.addComponent(cmbConsonante, 0, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+									.addGap(154)
+									.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
+										.addComponent(btnIngresar)
+										.addComponent(btnVocal)
+										.addComponent(btnConsonante)))))
+						.addGroup(gl_contentPane.createSequentialGroup()
+							.addGap(321)
+							.addComponent(btnSalir)))
 					.addContainerGap(195, Short.MAX_VALUE))
 		);
 		gl_contentPane.setVerticalGroup(
@@ -126,17 +138,19 @@ public class Ejercicio2 extends JFrame {
 					.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
 						.addComponent(cmbConsonante, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
 						.addComponent(btnConsonante))
-					.addContainerGap(312, Short.MAX_VALUE))
+					.addGap(32)
+					.addComponent(btnSalir)
+					.addContainerGap(259, Short.MAX_VALUE))
 		);
 		contentPane.setLayout(gl_contentPane);
 	}
 	
 	
-	
+	//Metodo para añadir un elemento
 	private void añadir() {
 		String frase = txtAñadir.getText();
 		
-		if(Character.isLetter(frase.charAt(0)) && frase != null) {
+		if(Character.isLetter(frase.charAt(0))) {
 			frase = frase.toLowerCase();
 			switch (frase.charAt(0)) {
 				case 'a', 'e', 'i', 'o', 'u':
@@ -152,6 +166,7 @@ public class Ejercicio2 extends JFrame {
 		txtAñadir.setText(null);
 	}
 	
+	//metodo para borrar el objeto seleccionado en la comboBox de vocales
 	private void borrarVocal() {
 		try {
 			int index = cmbVocal.getSelectedIndex();
@@ -161,6 +176,8 @@ public class Ejercicio2 extends JFrame {
 			JOptionPane.showMessageDialog(this, "No hay nada que borrar" );
 		}
 	}
+	
+	//metodo para borrar el objeto seleccionado en la comboBox de consonante
 	private void borrarConsonante() {
 		try {
 			int index = cmbConsonante.getSelectedIndex();
@@ -170,7 +187,10 @@ public class Ejercicio2 extends JFrame {
 			JOptionPane.showMessageDialog(this, "No hay nada que borrar" );
 		}
 	}
-	
+	//metodo para salir
+	 private void salir() {
+			System.exit(0);
+	 }
 	
 
 }

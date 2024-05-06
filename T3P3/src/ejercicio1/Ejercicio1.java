@@ -177,6 +177,7 @@ public class Ejercicio1 extends JFrame {
 	}
 	
 	
+	//metodo para realizar la apuesta
 	private void apuesta() {
 		int valor = 0;
 		boolean acertado = false;
@@ -213,7 +214,7 @@ public class Ejercicio1 extends JFrame {
 	}
 	
 	
-	
+	//valor para reiniciar el juego
 	private void reiniciar() {
 		txtApuesta.setText(null);
 		intentos = 0;
@@ -223,11 +224,15 @@ public class Ejercicio1 extends JFrame {
 		btnMeRindo.setEnabled(false);
 		
 	}
+	
+	//metodo para rendirse
 	private void rendirse() {
 		txtInfo.setText("Te has rendido. El numero era: " + adivina);
+		//se llama al metodo reiniciar
 		reiniciar();
 	}
 	
+	//metodo para salir
 	private void salir() {
 		System.exit(0);
 	}
