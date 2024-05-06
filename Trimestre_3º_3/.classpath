@@ -21,5 +21,6 @@
 	<classpathentry kind="lib" path="C:/Users/MEDAC/.p2/pool/plugins/javax.annotation_1.3.5.v20200909-1856.jar" sourcepath="C:/Users/MEDAC/.p2/pool/plugins/javax.annotation_1.3.5.v20200909-1856.jar"/>
 	<classpathentry kind="lib" path="C:/Users/MEDAC/.p2/pool/plugins/org.eclipse.e4.ui.di_1.5.100.v20230630-1554.jar" sourcepath="C:/Users/MEDAC/.p2/pool/plugins/org.eclipse.e4.ui.di_1.5.100.v20230630-1554.jar"/>
 	<classpathentry kind="lib" path="jgoodies-forms-1.8.0.jar" sourcepath="jgoodies-forms-1.8.0-sources.jar"/>
+	<classpathentry kind="lib" path="miglayout15-swing.jar" sourcepath="miglayout-src.zip"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
