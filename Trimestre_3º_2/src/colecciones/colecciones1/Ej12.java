@@ -4,9 +4,11 @@ import clases.Carta;
 import clases.Baraja;
 import java.util.HashMap;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 
 public class Ej12 {
-	
+
 	public static void main(String[] args) {
 		Baraja baraja = new Baraja();
 		HashMap<Integer, Integer> valores = new HashMap<Integer, Integer>();
@@ -19,6 +21,11 @@ public class Ej12 {
 		
 		
 		baraja.barajar();
+		baraja.mostrar();
+		System.out.println();
+		Collections.sort(Arrays.asList(baraja.getCarta()));
+		baraja.mostrar();
+		
 		
 		cartas.addAll(baraja.darCartas(5));
 		
@@ -27,6 +34,7 @@ public class Ej12 {
 	}
 	
 	public static Integer contarPuntos(ArrayList<Carta> cartas, HashMap<Integer,Integer> valores) {
+		
 		Integer puntos = 0;
 		
 		for(Carta carta : cartas) {

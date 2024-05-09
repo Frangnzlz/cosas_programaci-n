@@ -30,6 +30,11 @@ public class Baraja {
 			}
 		}
 	}
+	
+	public Carta[] getCarta() {
+		return carta;
+	}
+	
 	public int tamañoBaraja(){
 		return carta.length;
 	}
