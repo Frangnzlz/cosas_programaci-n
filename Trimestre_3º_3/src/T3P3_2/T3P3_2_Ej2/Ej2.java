@@ -124,7 +124,7 @@ public class Ej2 extends JFrame {
 				String Texto = "" + (cbxMayusculas.isSelected() ? txaEntrada.getText().toUpperCase() : txaEntrada.getText());
 				txaEntrada.setText(null);
 				
-				BufferedWriter writer = new BufferedWriter(new FileWriter("nose.txt",cbxAgregar.isSelected()));
+				BufferedWriter writer = new BufferedWriter(new FileWriter(file,cbxAgregar.isSelected()));
 				
 				writer.write(Texto);
 				writer.newLine();
