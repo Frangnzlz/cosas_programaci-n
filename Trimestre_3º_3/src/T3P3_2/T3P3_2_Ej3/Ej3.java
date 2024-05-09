@@ -186,6 +186,7 @@ public class Ej3 extends JFrame {
 				JOptionPane.showMessageDialog(this, "No empieza por una letra");
 			}
 			txtAñadir.setText(null);
+			btnIngresar.setEnabled(false);
 		}
 	}
 	
