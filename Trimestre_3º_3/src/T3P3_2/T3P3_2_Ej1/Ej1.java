@@ -1,4 +1,4 @@
-package T3P3_2_Ej1;
+package T3P3_2.T3P3_2_Ej1;
 
 import java.awt.EventQueue;
 

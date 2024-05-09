@@ -1,4 +1,4 @@
-package T3P3_2_Ej3;
+package T3P3_2.T3P3_2_Ej3;
 
 import java.awt.EventQueue;
 import java.awt.event.ActionEvent;
